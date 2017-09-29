@@ -1,0 +1,29 @@
+{% extends 'hereda.html' %}
+
+{% block contenido%}
+
+<h3>Listado de estudiantes administradores inscritos</h3>
+
+<table class="table table-striped table-hover">
+	<tr>
+		<td>Numero de habitacion</td>
+		<td>Tipo habitacion</td>
+		<td>Descripcion</td>
+		<td>Ocupado</td>
+		<td>Fecha de creacion/registro habitacion</td>
+	</tr>
+
+	{% for est in object_list %}
+	<tr>
+		<td>{{ est.numero }}</td>
+		<td>{{ est.tipo }}</td>
+		<td>{{ est.descripcion }}</td>
+		<td>{{ est.ocupado }}</td>
+		<td>{{ est.fecha }}</td>
+	</tr>
+
+	{% endfor %}
+
+</table>
+
+{% endblock %}

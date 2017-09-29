@@ -1,0 +1,32 @@
+{% extends 'hereda.html '%}
+
+{% block contenido %}
+<!--
+	<form method = "POST">
+		{% csrf_token %}
+
+		Nombre: {{ form.nombre }}
+		Carne: {{ form.carne }}
+		<button type="submit" value="Submit">Agregar</button>
+	</form>
+	<a href="{% url 'parcial1:listaEstudiante' %}" class="btn btn-success">Lista de estudiantes</a>
+-->	
+	<form method = "POST">
+		{% csrf_token %}
+		<table class="table table-striped table-hover">
+		<tr>
+			<td>Nombre: {{ form.nombre }}</td>
+			<td>Dpi: {{ form.dpi }}</td>
+			<td>Dpi: {{ form.fecha_egreso }}</td>
+			<td>
+				<button type="submit" value="Submit" class="btn btn-success" onclick="clicked()">Agregar</button>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="{% url 'analisis:listaCliente' %}" class="btn btn-success">Lista de Clientes</a>
+			</td>
+		</tr>
+		</table>
+	</form>
+{% endblock %}
