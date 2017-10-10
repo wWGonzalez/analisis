@@ -19,7 +19,7 @@ class habitacion(models.Model):
 	fecha = models.DateTimeField(auto_now_add = True)
 
 def __str__(self):
-		return '%s %s' % (self.numero,self.tipo,self.ocupado,self.descripcion)
+		return '%s %s %s %s' % (self.numero,self.tipo,self.ocupado,self.descripcion)
 
 class cliente(models.Model):
 	habitacion = models.ForeignKey(habitacion)
@@ -29,4 +29,4 @@ class cliente(models.Model):
 	fecha_egreso = models.DateTimeField()
 
 def __str__(self):
-		return '%s %s' % (self.nombre,self.dpi,self.habitacion)
+		return '%s %s %s' % (self.nombre,self.dpi,self.habitacion)
